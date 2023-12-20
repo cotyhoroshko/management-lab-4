@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  model-app:
+    image: model-app-image
+    container_name: fastapi-model-app
+    build: .
+    expose:
+      - 8000
+    environment:
+      PORT: 8000
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/app
